@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animaflix</title>
+
+        <!-- Librarys Non-Bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+
+        <!-- Header Start -->
+        <header>
+            <a href="#home" class="logo">
+                <div class="container">
+                    <div>
+                        <img alt="Animaflix Logo" src="img/logo.png">
+                    </div>
+                    <div>
+                        <span>A</span>nimaflix
+                    </div>
+                </div>
+            </a>
+            <nav class="navbar">
+                <a class="active" href="#home">Home</a>
+                <div class="dropdown">
+                    <a href="#home" class="dropbtn">Anime</a>
+                    <div class="dropdown-content">
+                        <a href="#season">Seasonal</a>
+                        <a href="#anime">Popular</a>
+                        <a href="#recommendation">Recommendations</a>
+                    </div>
+                </div>
+                <a href="html/genres.html">Genres</a>
+                <div class="dropdown">
+                    <a href="html/faq.html" class="dropbtn">Help</a>
+                    <div class="dropdown-content">
+                        <a href="html/aboutus.html">About Us</a>
+                        <a href="html/forms.html">Contact Us</a>
+                        <a href="html/faq.html">FAQ</a>
+                    </div>
+                </div>
+
+                <!--<a href="#topico">topico</a>-->
+            </nav>
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <i class="fas fa-gear" id="gear"></i>
+            </div>
+        </header>
+
+
+        <!--home-->
+        <section class="home" id="home">
+            <div class="swiper home-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                            <div class="box " style="background: url(img/home/parasyte.jpg) no-repeat;">
+                                <div class="content">
+                                    <h3>Parasyte: The Maxim</h3>
+                                    <p>All of a sudden, they arrived: parasitic aliens that descended upon Earth and quickly infiltrated humanity by burrowing into the brains of vulnerable targets. <a href="html/parasyte/parasyte.html">[Read More]</a></p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="box " style="background: url(img/home/noragami.jpg) no-repeat;">
+                                <div class="content">
+                                    <h3>Noragami</h3>
+                                    <p>In times of need, if you look in the right place, you just may see a strange telephone number scrawled in red.<br>If you call this number, you will hear a young man introduce himself as the Yato God. <a href="html/noragami/noragami.html">[Read More]</a></p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="box " style="background: url(img/home/saiki.jpg) no-repeat;">
+                                <div class="content">
+                                    <h3>The Disastrous Life of Saiki K.</h3>
+                                    <p>To the average person, psychic abilities might seem a blessing; for Kusuo Saiki, however, this could not be further from the truth.<br>Gifted with a wide assortment of supernatural abilities ranging from telepathy to x-ray vision, he finds this so-called blessing to be nothing but a curse. <a href="html/SaikiK/saiki.html">[Read More]</a></p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- season section start -->
+        <section class="season" id="season">
+            <h1 class="heading">Seasonal Animes(Fall 2022)</h1>
+            <div class="swiper season-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/seasonalanime/Chainsaw-Man.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Chainsaw Man</h3>
+                            <p>Denji is robbed of a normal teenage life, left with nothing but his deadbeat father's overwhelming debt. <a href="html/chainsaw_man/chainsaw_man.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/seasonalanime/mob.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Mob Psycho 100 III</h3>
+                            <p>After foiling a world-threatening plot, Shigeo "Mob" Kageyama returns to tackle the more exhausting aspects of his mundane life—starting with filling out his school's nerve-racking career form. <a href="html/MobPsycho100_3/Mob_Psycho_100_3.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/seasonalanime/bluelock.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Blue Lock</h3>
+                            <p>Yoichi Isagi was mere moments away from scoring a goal that would have sent his high school soccer team to the nationals, but a split-second decision to pass the ball to his teammate cost him that reality.<a href="html/blue_lock/blue_lock.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/seasonalanime/spy.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Spy x Family Part 2</h3>
+                            <p>With Anya Forger successfully enrolled at the renowned Eden Academy, Operation Strix advances to its second phase. <a href="html/SpyxFamilyPart2/SpyxFamilyPart2.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/seasonalanime/myhero.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>My Hero Academia Season 6</h3>
+                            <p>With Tomura Shigaraki at its helm, the former Liberation Army is now known as the Paranormal Liberation Front. <a href="html/MyHeroAcademiaSeason6/MyHeroAcademiaSeason6.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/seasonalanime/bleach.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Bleach: Thousand-Year Blood War</h3>
+                            <p>Guided by the spirit demon within him, orphaned Naruto learns to harness his powers as a ninja in this anime adventure series. <a href="html/bleach/bleach.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular animes section start -->
+        <section class="anime" id="anime">
+            <h1 class="heading">Popular Animes</h1>
+            <div class="swiper anime-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/popularanime/naruto.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Naruto Shippuden</h3>
+                            <p>Guided by the spirit demon within him, orphaned Naruto learns to harness his powers as a ninja in this anime adventure series. <a href="html/narutoShippuden/naruto_shippuden.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/popularanime/fullmetal.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Fullmetal Alchemist: Brotherhood</h3>
+                            <p>After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. <a href="html/fullmetal/fullmetal.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/popularanime/deathnote.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Death Note</h3>
+                            <p>Brutal murders, petty thefts, and senseless violence pollute the human world. <a href="html/death_note/death_note.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/popularanime/onepunch.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>One Punch Man</h3>
+                            <p>The seemingly unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, Saitama relentlessly trained for three years, losing all of his hair in the process. <a href="html/onepunch/onepunch.html">[Read More]</a></p>
+                        </div>
+                    </div>
+					<div class="swiper-slide">
+                        <div class="box" style="background: url(img/popularanime/kimetsu.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Demon Slayer: Kimetsu no Yaiba</h3>
+                            <p>Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. <a href="html/demonslayer/demonslayer.html">[Read More]</a></p>
+                        </div>
+                    </div>
+					 <div class="swiper-slide">
+                        <div class="box" style="background: url(img/popularanime/tokyo.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Tokyo Ghoul</h3>
+                            <p>A sinister threat is invading Tokyo: flesh-eating "ghouls" who appear identical to humans and blend into their population. <a href="html/tokyoGhoul/tokyo_ghoul.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- recommendation section start -->
+        <section class="recommendation" id="recommendation">
+            <h1 class="heading">recommendations</h1>
+            <div class="swiper recommendation-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/recommendation/onepiece.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>One Piece</h3>
+                            <p>Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. <a href="html/onepiece/onepiece.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/recommendation/jujutsu.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Jujutsu Kaisen</h3>
+                            <p>Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. <a href="html/jujutsukaisen/jujutsukaisen.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/recommendation/hunter.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Hunter x Hunter</h3>
+                            <p>Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted territories to locating rare items and monsters. <a href="html/hunterxhunter/hunterxhunter.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/recommendation/classroom.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Assassination Classroom</h3>
+                            <p>Tucked in the mountains near the elite Kunugigaoka Middle School lies a small derelict building that houses the delinquents and dropouts of Class 3-E. <a href="html/assassinationclassroom/assassinationclassroom.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/recommendation/sword.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Sword Art Online</h3>
+                            <p>Ever since the release of the innovative NerveGear, gamers from all around the globe have been given the opportunity to experience a completely immersive virtual reality. <a href="html/swordartonline/swordartonline.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box" style="background: url(img/recommendation/cowboy.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Cowboy Bebop</h3>
+                            <p>Crime is timeless. By the year 2071, humanity has expanded across the galaxy, filling the surface of other planets with settlements like those on Earth. <a href="html/cowboybepbop/cowboybepbop.html">[Read More]</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- copyright -->
+        <div class="copyright container">
+            <p>&#169; Animaflix. All rights reserved.<span>David Anastácio Nº202200843</span>Tomás Mendes Nº202200859</p>
+        </div>
+
+        <!-- Javascript -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
