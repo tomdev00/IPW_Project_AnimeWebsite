@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animaflix</title>
+
+        <!-- Libraries Non-Bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+
+        <!-- Header Start -->
+        <header>
+            <a href="../index.html" class="logo">
+                <div class="container">
+                    <div>
+                        <img alt="Animaflix Logo" src="../img/logo.png">
+                    </div>
+                    <div>
+                        <span>A</span>nimaflix
+                    </div>
+                </div>
+            </a>
+            <nav class="navbar">
+                <a class="active" href="../index.html">Home</a>
+				<a href="inputAnime.html">Add Anime</a>
+                <a href="genres.html">Genres</a>
+                <div class="dropdown">
+                    <a href="faq.html" class="dropbtn">Help</a>
+                    <div class="dropdown-content">
+                        <a href="aboutus.html">About Us</a>
+                        <a href="forms.html">Contact Us</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+
+                <!--<a href="#topico">topico</a>-->
+                        </nav>
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+            </div>
+
+        </header>
+        <br><br><br><br><br><br><br><br>
+        <!-- comedy section start -->
+        <section>
+            <h1 class="heading">Comedy Animes</h1>
+        </section>
+        <section class="customBox" id="customBox">
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/recommendation/classroom.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Assassination Classroom</h3>
+                            <p>Tucked in the mountains near the elite Kunugigaoka Middle School lies a small derelict building that houses the delinquents and dropouts of Class 3-E. <a href="assassinationclassroom/assassinationclassroom.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                   <div class="box " style="background: url(../img/saiki.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>The Disastrous Life of Saiki K.</h3>
+                            <p>To the average person, psychic abilities might seem a blessing; for Kusuo Saiki, however, this could not be further from the truth.<br>Gifted with a wide assortment of supernatural abilities ranging from telepathy to x-ray vision, he finds this so-called blessing to be nothing but a curse. <a href="SaikiK/saiki.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/seasonalanime/spy.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Spy x Family Part 2</h3>
+                            <p>With Anya Forger successfully enrolled at the renowned Eden Academy, Operation Strix advances to its second phase. <a href="SpyxFamilyPart2/SpyxFamilyPart2.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/seasonalanime/mob.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Mob Psycho 100 III</h3>
+                            <p>After foiling a world-threatening plot, Shigeo "Mob" Kageyama returns to tackle the more exhausting aspects of his mundane life—starting with filling out his school's nerve-racking career form. <a href="MobPsycho100_3/Mob_Psycho_100_3.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/popularanime/onepunch.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>One Punch Man</h3>
+                            <p>The seemingly unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, Saitama relentlessly trained for three years, losing all of his hair in the process. <a href="onepunch/onepunch.html">[Read More]</a></p>
+                        </div>
+                </div>
+                
+        </section>
+        
+        <!-- copyright -->
+        <div class="copyright container">
+            <p>&#169; Animaflix. All rights reserved.<span>David Anastácio Nº202200843</span>Tomás Mendes Nº202200859</p>
+        </div>
+
+		<!-- Javascript -->
+        <script>
+            window.onload = function() {
+                let animes_important = JSON.parse(localStorage.getItem("animes_important")) || []; // get the animes_important array from localstorage
+                for (let animes_importants of animes_important) {
+                    if(animes_importants.genre === "comedy") {
+                        let container = document.getElementById("customBox");
+                        let responsiveDiv = document.createElement("div");
+                        responsiveDiv.classList.add("responsive");
+                        container.appendChild(responsiveDiv);
+
+                        let boxDiv = document.createElement("div");
+                        boxDiv.classList.add("box");
+                        boxDiv.style.background = `url(${animes_importants.image}) no-repeat`;
+                        responsiveDiv.appendChild(boxDiv);
+
+                        let contentDiv = document.createElement("div");
+                        contentDiv.classList.add("content");
+                        responsiveDiv.appendChild(contentDiv);
+
+                        let h3 = document.createElement("h3");
+                        h3.innerHTML = animes_importants.name;
+                        contentDiv.appendChild(h3);
+
+                        let p = document.createElement("p");
+                        p.innerHTML = `${animes_importants.description} <a href='notfound.html'>[Read More]</a>`;
+                        contentDiv.appendChild(p);
+                    }
+                }
+            }
+        </script>
+
+        <!-- Javascript -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

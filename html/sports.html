@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animaflix</title>
+
+        <!-- Libraries Non-Bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+
+        <!-- Header Start -->
+        <header>
+            <a href="../index.html" class="logo">
+                <div class="container">
+                    <div>
+                        <img alt="Animaflix Logo" src="../img/logo.png">
+                    </div>
+                    <div>
+                        <span>A</span>nimaflix
+                    </div>
+                </div>
+            </a>
+            <nav class="navbar">
+                <a class="active" href="../index.html">Home</a>
+				<a href="inputAnime.html">Add Anime</a>
+                <a href="genres.html">Genres</a>
+                <div class="dropdown">
+                    <a href="faq.html" class="dropbtn">Help</a>
+                    <div class="dropdown-content">
+                        <a href="aboutus.html">About Us</a>
+                        <a href="forms.html">Contact Us</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+
+                <!--<a href="#topico">topico</a>-->
+                        </nav>
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+            </div>
+
+        </header>
+        <br><br><br><br><br><br><br><br>
+        <!-- sports section start -->
+        <section>
+            <h1 class="heading">Sports Animes</h1>
+        </section>
+        <section class="customBox" id="customBox">
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/seasonalanime/bluelock.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Blue Lock</h3>
+                            <p>Yoichi Isagi was mere moments away from scoring a goal that would have sent his high school soccer team to the nationals, but a split-second decision to pass the ball to his teammate cost him that reality.<a href="blue_lock/blue_lock.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                     <div class="box" style="background: url(../img/haikyuu.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Haikyuu!</h3>
+                            <p>Ever since having witnessed the "Little Giant" and his astonishing skills on the volleyball court, Shouyou Hinata has been bewitched by the dynamic nature of the sport. <a href="haikyuu/haikyuu.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/kuroko.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Kuroko no Basket</h3>
+                            <p>For the last three years, Teikou Middle School has dominated the national basketball scene with its legendary lineup: the "Generation of Miracles." <a href="kurokonobasket/kurokonobasket.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/hajime.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Hajime no ippo</h3>
+                            <p>In his father's absence, teenager Ippo Makunouchi works hard to help his mother run her fishing boat rental business. <a href="hajimenoippo/hajimenoippo.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/runwiththewind.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Run with the Wind</h3>
+                            <p>Former ace runner of Sendai Josei High School, Kakeru Kurahara is chased away from a convenience store for shoplifting. <a href="runwiththewind/runwiththewind.html">[Read More]</a></p>
+                        </div>
+                </div>
+             
+        </section>
+        
+        <!-- copyright -->
+        <div class="copyright container">
+            <p>&#169; Animaflix. All rights reserved.<span>David Anastácio Nº202200843</span>Tomás Mendes Nº202200859</p>
+        </div>
+
+		<!-- Javascript -->
+        <script>
+            window.onload = function() {
+                let animes_important = JSON.parse(localStorage.getItem("animes_important")) || []; // get the animes_important array from localstorage
+                for (let animes_importants of animes_important) {
+                    if(animes_importants.genre === "sports") {
+                        let container = document.getElementById("customBox");
+                        let responsiveDiv = document.createElement("div");
+                        responsiveDiv.classList.add("responsive");
+                        container.appendChild(responsiveDiv);
+
+                        let boxDiv = document.createElement("div");
+                        boxDiv.classList.add("box");
+                        boxDiv.style.background = `url(${animes_importants.image}) no-repeat`;
+                        responsiveDiv.appendChild(boxDiv);
+
+                        let contentDiv = document.createElement("div");
+                        contentDiv.classList.add("content");
+                        responsiveDiv.appendChild(contentDiv);
+
+                        let h3 = document.createElement("h3");
+                        h3.innerHTML = animes_importants.name;
+                        contentDiv.appendChild(h3);
+
+                        let p = document.createElement("p");
+                        p.innerHTML = `${animes_importants.description} <a href='notfound.html'>[Read More]</a>`;
+                        contentDiv.appendChild(p);
+
+
+                    }
+                }
+            }
+        </script>
+
+        <!-- Javascript -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animaflix</title>
+
+        <!-- Libraries Non-Bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+
+        <!-- Header Start -->
+        <header>
+            <a href="../index.html" class="logo">
+                <div class="container">
+                    <div>
+                        <img alt="Animaflix Logo" src="../img/logo.png">
+                    </div>
+                    <div>
+                        <span>A</span>nimaflix
+                    </div>
+                </div>
+            </a>
+            <nav class="navbar">
+                <a class="active" href="../index.html">Home</a>
+				<a href="inputAnime.html">Add Anime</a>
+                <a href="genres.html">Genres</a>
+                <div class="dropdown">
+                    <a href="faq.html" class="dropbtn">Help</a>
+                    <div class="dropdown-content">
+                        <a href="aboutus.html">About Us</a>
+                        <a href="forms.html">Contact Us</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+
+                <!--<a href="#topico">topico</a>-->
+                        </nav>
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+            </div>
+
+        </header>
+        <br><br><br><br><br><br><br><br>
+        <!-- horror section start -->
+        <section>
+            <h1 class="heading">Horror Animes</h1>
+        </section>
+        <section class="customBox" id="customBox">
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/popularanime/tokyo.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Tokyo Ghoul</h3>
+                            <p>A sinister threat is invading Tokyo: flesh-eating "ghouls" who appear identical to humans and blend into their population. <a href="tokyoGhoul/tokyo_ghoul.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                   <div class="box " style="background: url(../img/parasyte.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Parasyte: The Maxim</h3>
+                            <p>All of a sudden, they arrived: parasitic aliens that descended upon Earth and quickly infiltrated humanity by burrowing into the brains of vulnerable targets. <a href="parasyte/parasyte.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/elfenlied.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Elfen Lied</h3>
+                            <p>Lucy is a special breed of human referred to as "Diclonius," born with a short pair of horns and invisible telekinetic hands that lands her as a victim of inhumane scientific experimentation by the government. <a href="elfenlied/elfenlied.html">[Read More]</a></p>
+                        </div>
+                </div>
+                <div class="responsive">
+                    <div class="box" style="background: url(../img/another.jpg) no-repeat;"></div>
+                        <div class="content">
+                            <h3>Another</h3>
+                            <p>In class 3-3 of Yomiyama North Junior High, transfer student Kouichi Sakakibara makes his return after taking a sick leave for the first month of school. <a href="another/another.html">[Read More]</a></p>
+                        </div>
+                </div>
+                
+        </section>
+        
+        <!-- copyright -->
+        <div class="copyright container">
+            <p>&#169; Animaflix. All rights reserved.<span>David Anastácio Nº202200843</span>Tomás Mendes Nº202200859</p>
+        </div>
+		
+		<!-- Javascript -->
+        <script>
+            window.onload = function() {
+                let animes_important = JSON.parse(localStorage.getItem("animes_important")) || []; // get the animes_important array from localstorage
+                for (let animes_importants of animes_important) {
+                    if(animes_importants.genre === "horror") {
+                        let container = document.getElementById("customBox");
+                        let responsiveDiv = document.createElement("div");
+                        responsiveDiv.classList.add("responsive");
+                        container.appendChild(responsiveDiv);
+
+                        let boxDiv = document.createElement("div");
+                        boxDiv.classList.add("box");
+                        boxDiv.style.background = `url(${animes_importants.image}) no-repeat`;
+                        responsiveDiv.appendChild(boxDiv);
+
+                        let contentDiv = document.createElement("div");
+                        contentDiv.classList.add("content");
+                        responsiveDiv.appendChild(contentDiv);
+
+                        let h3 = document.createElement("h3");
+                        h3.innerHTML = animes_importants.name;
+                        contentDiv.appendChild(h3);
+
+                        let p = document.createElement("p");
+                        p.innerHTML = `${animes_importants.description} <a href='notfound.html'>[Read More]</a>`;
+                        contentDiv.appendChild(p);
+
+
+                    }
+                }
+            }
+        </script>
+		
+        <!-- Javascript -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

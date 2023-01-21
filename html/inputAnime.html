@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaflix</title>
+
+    <!-- Librarys Non-Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">
+            <div class="container">
+                <div>
+                    <img alt="Animaflix Logo" src="../img/logo.png">
+                </div>
+                <div>
+                    <span>A</span>nimaflix
+                </div>
+            </div>
+        </a>
+        <nav class="navbar">
+            <a class="active" href="../index.html">Home</a>
+            <a href="inputAnime.html">Add Anime</a>
+            <a href="genres.html">Genres</a>
+            <div class="dropdown">
+                <a href="faq.html" class="dropbtn">Help</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="forms.html">Contact Us</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <!--<a href="#topico">topico</a>-->
+                    </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+        </div>
+
+    </header>
+    <br><br><br><br>
+    <form>
+        <label class="form-label">Name: <input type="text" id="name" class="form-input"></label>
+        <label class="form-label">Short Description: <input type="text" maxlength = "180" id="description" class="form-input"></label>
+        <label class="form-label">Image Link: <input type="text" id="image" class="form-input"></label>
+        <label class="form-label">Gender: 
+            <select id="genre" class="form-select">
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="scifi">Sci-Fi</option>
+                <option value="sports">Sports</option>
+                <option value="supernatural">Supernatural</option>
+                <option value="suspense">Suspense</option>
+            </select>
+        </label>
+        <input type="button" value="Submit" class="form-button" onclick="submitForm()">
+    </form>
+
+    <script src="../js/main.js"></script>   
+    <script>
+        let animes_important = JSON.parse(localStorage.getItem("animes_important")) || []; // get the animes_important array from localstorage or create an empty one
+        function submitForm() {
+            alert("Anime added successfully");
+            let name = document.getElementById("name").value;
+            let description = document.getElementById("description").value;
+            let genre = document.getElementById("genre").value;
+            let image = document.getElementById("image").value;
+            document.getElementById("name").value = "";
+            document.getElementById("description").value = "";
+            document.getElementById("image").value = "";
+            animes_important.push({name: name, description: description, genre: genre, image: image});
+            localStorage.setItem("animes_important", JSON.stringify(animes_important)); // save the animes_important array to localstorage
+            let animes_importantDiv = document.createElement("div");
+            animes_importantDiv.innerHTML = `Name: ${name}, Description: ${description}, Genre: ${genre}, Image: ${image}`;
+            let container = document.getElementById("animes_container");
+            container.appendChild(animes_importantDiv);
+        }
+    </script>
+</body>
+
+</html>
