@@ -27,15 +27,8 @@
                 </div>
             </a>
             <nav class="navbar">
-                <a class="active" href="../../index.html">home</a>
-                <div class="dropdown">
-                    <a href="../../index.html" class="dropbtn">Anime</a>
-                    <div class="dropdown-content">
-                        <a href="../../index.html">Seasonal</a>
-                        <a href="../../index.html">Popular</a>
-                        <a href="../../index.html">Recommendations</a>
-                    </div>
-                </div>
+                <a class="active" href="../../index.html">Home</a>
+                <a href="../inputAnime.html">Add Anime</a>
                 <a href="../genres.html">Genres</a>
                 <div class="dropdown">
                     <a href="../faq.html" class="dropbtn">Help</a>
@@ -47,12 +40,11 @@
                 </div>
 
                 <!--<a href="#topico">topico</a>-->
-            </nav>
+                        </nav>
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
-                <i class="fas fa-search" id="search-icon"></i>
-                <i class="fas fa-gear" id="gear"></i>
             </div>
+
         </header>
 		<section>
 			<div class="row">
@@ -100,6 +92,14 @@
 				</div>
 			</div>
 		</section>
+		
+		<section>
+			<textarea cols="40" rows="5" id="name-anime" placeholder="Type your username here." ></textarea>
+            <textarea cols="40" rows="5" id="comment" placeholder="Comment here..."></textarea>
+            <button onclick="applyComment();" class="btn_comments">Send</button>
+            <div id="commentsArea">
+            </div>
+        </section>
 		
         <!-- copyright -->
         <div class="copyright container">
